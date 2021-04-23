@@ -1,0 +1,23 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
+plugins {
+    kotlin("jvm") version "1.4.32"
+}
+
+group = "invoke"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+    maven{
+        url = uri("https://jitpack.io")
+    }
+}
+
+dependencies {
+    implementation("io.arrow-kt:arrow-core:0.13.1")
+}
+
+tasks.withType<KotlinCompile>() {
+    kotlinOptions.jvmTarget = "1.8"
+}
