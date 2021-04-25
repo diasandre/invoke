@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.github.diasandre.invoke"
-version = "0.1.2"
+version = "0.1.3"
 
 repositories {
     mavenCentral()
@@ -37,4 +37,16 @@ tasks.jar {
 
 java {
     withSourcesJar()
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            groupId = "com.github.diasandre"
+            artifactId = "invoke"
+            version = "0.1.3"
+
+            from(components["kotlin"])
+        }
+    }
 }
