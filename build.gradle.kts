@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.github.diasandre.invoke"
-version = "0.1.3"
+version = "0.1.4"
 
 repositories {
     mavenCentral()
@@ -44,7 +44,7 @@ publishing {
         create<MavenPublication>("maven") {
             groupId = "com.github.diasandre"
             artifactId = "invoke"
-            version = "0.1.3"
+            version = "0.1.4"
 
             from(components["kotlin"])
         }
